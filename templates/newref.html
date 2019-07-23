@@ -1,0 +1,22 @@
+{% extends 'accueil.html' %}
+
+{% block content %}
+
+<div class="inscrit">
+  <br>
+  <br>
+    <h1>REFERENCIEL</h1>
+    <br>
+    <br>
+    <form method="POST" id="inscrit" action="">
+        <label>Nom Referenciel :</label>
+        <input type="text" name="nom_ref" id="name"  required>
+        <br>
+        <br>
+        <div class="form-group">
+                <input class="btn btn-success" type="submit" name="valider" id="valider" value="Envoyer"/>
+                <input class="btn btn-warning" type="reset" name="annuler" id="annuler" value="Annuler"/>
+            </div>
+    </form>
+</div>
+      {% endblock content %}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"> 
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css"  href=" {{ url_for('static',filename='css/cssnav.css')}}"/>
+        <link rel="stylesheet" type="text/css"  href=" {{ url_for('static',filename='css/kha.css')}}"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>accueille
+        </title>
+</head>
+<body>
+   <div class="container-fluide">
+       <header class="row">
+            <div class="col-lg-2"><img class="logo1" src="{{ url_for('static',filename='image/gif.gif')}}" alt="section"></div>
+            <div class="col-lg-8">
+            <h1>SONATEL ACADEMIE</H1>
+            <h2>Coding for better life</h2>
+            </div>
+            <div class="col-lg-2"><img src="{{ url_for('static',filename='image/2.jpg')}}" alt="tof" class="img-fluid"></div>
+         <div class="nom">
+            <h2>Ngagne Fall</h2>
+         </div>
+         </header>
+
+       <div class="row">
+            <nav class="col-lg-3">
+                    <ul id="menu-accordeon">
+                        <li><a href="accueil">Deconnexion</a>
+                        <li><a href="home">accueille</a>
+                        </li>
+                            <li><a href="#">Scolarite</a>
+                               <ul>
+                                  <li><a href="{{url_for('inscription')}}">Inscription</a></li>
+                                  <li><a href="{{url_for('modifap2')}}">Modifier</a></li>
+                                  <li><a href="/listapp1">apprenants</a></li>
+                                  <li><a href="/listapan">Annuler</a></li>
+                                  <li><a href="/listapsus">Suspendre</a></li>
+                               </ul>
+                            </li>
+                             <li><a href="#">Referentiel</a>
+                               <ul>
+                                  <li><a href="nouveauref">Nouveau</a></li>
+                                  <li><a href="{{url_for('modifref')}}">Modifier</a></li>
+                                  <li><a href="listref">Liste</a></li>
+                                
+                               </ul>
+                            </li>
+                            <li><a href="#">Promo</a>
+                               <ul>
+                                  <li><a href="nouveaupromo">Nouveau</a></li>
+                                  <li><a href="{{url_for('modifpromo')}}">Modifier</a></li>
+                                  <li><a href="listpromo">Liste</a></li>
+                               </ul>
+                            </li>
+                         </ul>
+            </nav>
+            
+            <section class="col-lg-9">
+               <div class="overflow-auto">
+                     {% block content %}{% endblock content %}
+               </div>
+         </section>
+      
+       </div>
+       
+       <footer class="row">
+           
+            
+            <div class="col-lg-12">copyright sonatel academi</div>
+          
+
+       </footer>
+
+
+   </div>
+</body>
+
+</html>

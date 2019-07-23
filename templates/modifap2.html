@@ -1,0 +1,115 @@
+
+{% extends 'accueil.html' %}
+{% block content %}
+
+        <div class="inscrit">
+            <div>
+                
+                    <table class="table table table-sm table-striped table-bordered ">
+                        <tr>
+                           
+                            
+                            <th><h3>pseudo</h3></th>
+                            <th><h3>nom</h3></th>
+                            <th><h3>prenom</h3></th>
+                            <th><h3>date nais</h3></th>
+                            <th><h3>statu</h3></th> 
+                            <th><h3>sexe</h3></th>
+                            <th><h3>promo</h3></th>
+                            <th><h3>Action</h3></th>
+                            
+                           
+                        </tr>
+                        {% for row in l1 %}
+                            <tr>
+                                
+                                <td><h2>{{row.1}}</h2></td>
+                                <td><h2>{{row.2}}</h2></td>
+                                <td><h2>{{row.3}}</h2></td>
+                                <td><h2>{{row.4}}</h2></td>
+                                <td><h2>{{row.5}}</h2></td>
+                                <td><h2>{{row.6}}</h3></td>
+                                    <td><h2>{{row.7}}</h3></td>
+                                
+                            
+                                <td>
+                                    <a href="/anulap/{{row.0}}" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modaledit{{row.0}}">Modifier</a>
+                                </td>
+                                
+                            </tr>
+                        {% endfor%}
+                    </table>
+            
+            </div>
+        
+         {% for row in l1 %}
+
+         
+            <div id="modaledit{{row.0}}" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Please Update Data</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form action="{{url_for('modifap2')}}" method="POST">
+                                    
+                                    <div class="form-group">
+                                        <label>Nom:</label>
+                                        <input class="hidden" name="id_ap" value=" {{row.0}}">
+                                        <input type="text" class="form-control" name="pseudo" value="{{row.1}}">
+                                    </div>
+                                    <div class="form-group">
+                                            <label>Nom:</label>
+                                            <input type="text" class="form-control" name="nom_ap" value="{{row.2}}">
+                                    </div>
+                                    <div class="form-group">
+                                            <label>prenom:</label>
+                                            <input type="text" class="form-control" name="prenom_ap" value="{{row.3}}">
+                                    </div>
+                                    <div class="form-group">
+                                            <label>Date Naiss:</label>
+                                            <input type="date" class="form-control" name="date_nais" value="{{row.4}}">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="statu">Statu :</label>
+                                        <select name="statu" id="statu">
+                                            <option value="{{row.5}}">reinsscrit</option>
+                                            <option value="{{row.5}}">suspend</option>
+                                        </select> <br> <br>
+                                    </div>
+                                    <div class="form-group">
+                                            <label for="sexe">Sexe :</label>
+                                            <select name="sexe_ap" id="sexe">
+                                                <option value="{{row.6}}">M</option>
+                                                <option value="{{row.6}}">F</option>
+                                            </select> <br> <br>
+                                    </div>
+                                     <div class="form-group">
+                                            <label>Promo:</label>
+                                            <select name="id_promo" id="promo">
+                                            {% for lister2 in l2%}
+                                                    <option value="{{lister2[0]}}">{{lister2[1]}}</option>
+                                             {% endfor%}
+                                            </select><br><br>
+                                    </div>
+
+                                    <div class="form-group">
+                                            <button class="btn btn-primary" type="submit">Update Data</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                {% endfor%}
+            </div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+{% endblock content %}

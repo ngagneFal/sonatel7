@@ -1,0 +1,62 @@
+{% extends 'accueil.html' %}
+{% block content %}
+
+        <form>
+
+            <div class="form-row">
+                <div class="row">
+                    <div class="col">
+                        <label for="colFormLabel" class="col-sm-2 col-form-label">Matricule</label>
+                        <input name="matricule" type="text" class="form-control" placeholder="matricule">
+                    </div>
+                </div>
+            </div>
+                <div class="form-row">
+                    <div class="row">
+                        <div class="col">
+                            <label for="colFormLabel" class="col-sm-3 col-form-label">Nom</label>
+                            <input type="text" class="form-control" placeholder="Nom"  name="nom_ap">
+                        </div>
+                        <div class="col">
+                            <label for="colFormLabel" class="col-sm-3 col-form-label">Prenom</label>
+                             <input type="text" class="form-control"  name="prenom_ap" placeholder="Prenom">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="row">
+                        <div class="col">
+                            <label for="colFormLabel" class="col-sm-3 col-form-label">telephone</label>
+                            <input type="" class="form-control" placeholder="telephone"  name="tel_ap">
+                        </div>
+                        <div class="col">
+                            <label for="colFormLabel" class="col-sm-3 col-form-label">DateNais</label>
+                             <input type="date" class="form-control"  name="date_nais" placeholder="date">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-3">
+                    <label for="inputCity">Adresse</label>
+                    <input type="text" class="form-control" name="add_ap">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="inputState">Sexe</label>
+                    <select id="inputState" class="form-control" >
+                      <option selected>Choose...</option>
+                      <option selected>Masculin</option>
+                      <option selected>Feminin</option>  
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-group col-md-5">
+                    <input class="btn btn-success" type="submit" name="valider" id="valider" value="Envoyer"/>
+                     <input class="btn btn-warning" type="reset" name="annuler" id="annuler" value="Annuler"/>
+                    </div> 
+                    </div>
+              </form>
+
+{% endblock content %}

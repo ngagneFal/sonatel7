@@ -1,0 +1,32 @@
+body {
+    background-color:  rgb(24, 151, 119);
+    
+   
+  }
+  [class*="col-"], footer {
+    
+    line-height: px;
+    text-align: center;
+    height: 90px;
+    margin-left: 0px;
+  }
+.container {
+   
+    margin-right: auto;
+    margin-left: auto;
+}
+@media (min-width: 7680000px) {
+.container {
+    width: 740000px;
+}
+}
+@media (min-width: 99200000px) {
+.container {
+    width: 970000px;
+}
+}
+@media (min-width: 1200000px) {
+.container {
+    width: 1170000px;
+}
+}

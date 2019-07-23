@@ -1,0 +1,173 @@
+body {
+  background-color: rgb(24, 151, 119);  
+
+
+}
+[class*="col-"], footer {
+
+line-height: px;
+text-align: center;
+height: 100px;
+margin-left: 0px;
+}
+.container {
+
+margin-right: auto;
+margin-left: auto;
+}
+@media (min-width: 7680000px) {
+.container {
+width: 740000px;
+}
+}
+@media (min-width: 99200000px) {
+.container {
+width: 970000px;
+}
+}
+@media (min-width: 1200000px) {
+.container {
+width: 1170000px;
+}
+}
+.col-lg-9 {
+
+color: blanchedalmond;
+width: 90px;
+font-size:2vw;
+
+height:525px;
+
+
+background-repeat:no-repeat;
+padding-top: 25px;
+border-style: outset;
+border-color: rgb(202, 169, 20);  
+}
+
+.col-lg-6 {
+
+
+border-style: outset;
+background-color: rgb(202, 169, 20);
+height: 500px;
+
+
+
+}
+
+.col-lg-3{
+color: blanchedalmond;
+width: 100px;
+height:525px;
+margin-right: 0px;
+font-size:2vw;
+
+
+}
+
+
+.row{
+width:85%;
+margin:auto;
+min-height:100px;
+background-color: rgb(24, 151, 119); 
+padding-top: 10px;
+font-size:2vw;
+
+
+}
+.col-lg-1
+{
+background-color:rgb(24, 151, 119);  
+}
+
+.logo1{
+
+display: auto;
+background-color:  rgb(24, 151, 119); 
+height: 96px;
+width:140px;
+display: block;
+margin-left: 180px;
+
+}
+.logo2{
+margin: 0px;
+padding: 0px;
+display: auto;
+background-color: rgb(24, 151, 119);
+height: 96px;
+width:160px;
+display: auto;
+}
+.fo1{
+margin: 0px;
+padding: 0px;
+display: auto;
+padding-top: 10px;
+height: 80px;
+width:90px;
+display: auto;
+
+}
+.fo2{
+margin: 0px;
+padding: 0px;
+display: auto;
+padding-top: 10px;
+height: 80px;
+width:90px;
+display: auto;
+
+}
+.fo3{
+margin: 0px;
+padding: 0px;
+display: auto;
+padding-top: 10px;
+height: 80px;
+width:90px;
+display: auto;
+
+}
+section{
+
+height: 25px;
+width:100%;
+
+border-style: outset;
+border-color: rgb(202, 169, 20);
+
+
+
+}
+footer{
+border: 1px solid #ccc;
+height: 96px;
+width:260px;
+border-style: outset;
+border-color: rgb(202, 169, 20);
+
+
+
+
+}
+header{
+width: 100%;
+position: relative;
+border-style: inset;
+border-color: rgb(202, 169, 20);
+}
+
+.milo{
+border: 1px solid #ccc;
+box-shadow: 15px 0px 15px #BBB;
+height: 96px;
+width:200px;
+background-color: #fff;
+text-align: center;
+}
+form{
+padding-top: 30px;
+ }

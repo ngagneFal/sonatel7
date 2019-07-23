@@ -1,0 +1,60 @@
+{% extends 'accueil.html' %}
+
+{% block content %}
+<div class="inscrit">
+    <br>
+    <br>
+        <h1>Inscription</h1>
+        {%with messages = get_flashed_messages() %}
+                    {%if messages%}
+                    {%for message in messages%}
+                    <div class="alert alert-success alert-dismissable" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                            <span aria-hidden="true">x</span>
+                        </button> 
+                        {{message}}
+                    </div>
+                    {%endfor%}
+                    {%endif%}
+                    {%endwith%}
+        <br>
+        <form method="POST" id="inscrit" action="#">
+                <label>Matricule :</label>
+                <input type="text" name="matricule" id="name"  readonly="true" value="{{naf}}"  ><br><br>
+                <label>Nom:</label>
+                <input type="text" name="nom_ap" id="name"  required><br><br>
+                <label>Prenom :</label>
+                <input type="text" name="prenom_ap" id="name"  required><br><br>
+                <label>Date Naisssance :</label>
+                 <input type="date" name="date_nais" max="2000-01-12" min="1990-01-12" id="name"  required><br><br>
+                <label>pseudo :</label>
+                 <input type="text" name="pseudo" id="name"  required><br><br>
+                 <label for="sexe">Sexe :</label>
+                 <select name="sexe_ap" id="sexe">
+                     <option value="M">M</option>
+                     <option value="F">F</option>
+                 </select> <br> <br>
+                 <label for="statu">Statu :</label>
+                 <select name="statu" id="statu">
+                     <option value="inscrit">inscrit</option>
+                
+                 </select> <br> <br>
+                 <label>Nom Promo :</label>
+            <select name="nom_promo" id="ref">
+                {% for promo in n %}   
+                    <option value="{{ promo[0] }}">{{ promo[1] }}</option>
+                {%endfor%}
+            </select>  <br>
+                            <br>
+                            <br>       
+                    
+                        <div class="form-group">
+                            <input class="btn btn-success" type="submit" name="valider" id="valider" value="Envoyer"/>
+                            <input class="btn btn-warning" type="reset" name="annuler" id="annuler" value="Annuler"/>
+                        </div>
+                    </form>
+                </div>
+        
+        
+
+{% endblock content %}

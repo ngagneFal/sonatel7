@@ -1,0 +1,71 @@
+{% extends 'accueil.html' %}
+{% block content %}
+
+<form method="POST" action="">
+      
+    <div class="form-group row">
+      <label for="colFormLabel" class="col-sm-2 col-form-label">Matricule</label>
+      <div class="col-7">
+        <input class="form-control" placeholder="matricule" name="matricule" >
+      </div>
+    </div>
+    
+    <div class="form-group row">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">Nom</label>
+        <div class="col-7">
+            <input type="text" class="form-control" placeholder="nom" name="nom_ap">
+          </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">Prenom</label>
+        <div class="col-7">
+            <input type="text" class="form-control" placeholder="prenom" name="prenom_ap">
+          </div>
+      </div>
+      <div class="form-group row">
+            <label for="colFormLabel" class="col-sm-2 col-form-label">Addresse</label>
+            <div class="col-7">
+                <input type="text" class="form-control" placeholder="adresse" name="add_ap">
+              </div>
+          </div>
+
+      <div class="form-group row">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">Date Naissance</label>
+        <div class="col-7">
+            <input type="text" class="form-control" placeholder="date_nais" name="date_nais">
+          </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">Telephone</label>
+        <div class="col-7">
+            <input type="text" class="form-control" placeholder="telephone" name="tel_ap">
+          </div>
+      </div>
+      <div class="form-group row">
+            <label for="colFormLabel" class="col-sm-2 col-form-label" >Genre</label>
+            <input name="sexe_ap">
+            <div class="col-auto" >
+                <select class="custom-select" id="inlineFormCustomSelect">
+
+                        <option value="1" >choisir</option>
+                        
+                    <option value="1" >Masculin</option>
+                    <option value="2">Feminin</option>   
+                </select>
+            </div>
+          </div>
+
+          {% for i in result %}
+            {{ i }}
+          {%endfor%}
+      <div class="form-group">
+        <input class="btn btn-success" type="submit" name="valider" id="valider" value="Envoyer"/>
+        <input class="btn btn-warning" type="reset" name="annuler" id="annuler" value="Annuler"/>
+    </div>
+
+  </form>
+
+ 
+{% endblock content %}

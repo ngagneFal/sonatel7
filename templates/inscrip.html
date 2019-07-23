@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css"  href=" {{ url_for('static',filename='css/cssnav.css')}}"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>accueille
+        </title>
+</head>
+<body>
+   <div class="container-fluide">
+       <header class="row">
+            <div class="col-lg-2"><img class="logo1" src="{{ url_for('static',filename='image/gif.gif')}}" alt="section"></div>
+            <div class="col-lg-8">
+            <h1>SONATEL ACADEMIE</H1>
+            <h2>Coding for better life</h2>
+            </div>
+            <div class="col-lg-2"><img src="{{ url_for('static',filename='image/2.jpg')}}" alt="tof" class="img-fluid"></div>
+        </header>
+       <div class="row">
+            <nav class="col-lg-3">
+                    <ul id="menu-accordeon">
+                            <li><a href="#">Scolarite</a>
+                               <ul>
+                                  <li><a href="inscription">Inscription</a></li>
+                                  <li><a href="modifierap">Modifier</a></li>
+                                 
+                                  <li><a href="annulerap">Annuler</a></li>
+                                  <li><a href="suspendre">Suspendre</a></li>
+                               </ul>
+                            </li>
+                             <li><a href="#">Referentiel</a>
+                               <ul>
+                                  <li><a href="nouveauref">Nouveau</a></li>
+                                  <li><a href="modifierref">Modifier</a></li>
+                                
+                               </ul>
+                            </li>
+                            <li><a href="#">PROMO</a>
+                               <ul>
+                                  <li><a href="nouveaupromo">Nouveau</a></li>
+                                  <li><a href="modifierpromo">Modifier</a></li>
+                                  <li><a href="listpromo">Liste</a></li>
+                               </ul>
+                            </li>
+                         </ul>
+            </nav>
+            <di class="col-lg-3">
+
+               </di>
+            <section class="col-lg-3">
+                  <div  class="container">
+                        <div class="panel panel-info">
+                           
+                            <div class="form"> 
+                                <div  class="panel-body">
+                                     <form method="post">
+                                            <div class="form-group">
+                                                <label class="control-label">id</label>
+                                                <input  class="form-control" type="text"  name="nom"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">nom</label>
+                                                <input  class="form-control" type="text"  name="nom"/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">Prenom</label>
+                                                <input  class="form-control" type="text"  name="nom"/>
+                                            </div>
+                                            
+                                         <div class="form-group">
+                                            
+                                             adresse<input   class="form-control" type="text" name ="adresse"/>
+                                         </div>
+                                         <div class="form-group">
+                                                <label>Telephone</label>
+                                                <input type="text" name="tel" id="tel"/>
+                                            </div>
+                                         <div class="form-group">
+                                                <label>Genre</label>
+                                                M<input type="radio" name="genre" id="genre"/>
+                                                n<input type="radio" name="genre" id="genre"/>
+                                            </div>
+                                         <div class="form-group">
+                                            <input class="btn btn-success" name="valider" value="valider" />
+                                             <input class="btn btn-danger" name="annuler" value="annuler" />
+                                        </div>
+                                </form>
+                            </div>
+                        </div>
+                        </div>
+                   </div>    
+            </section>
+            <di class="col-lg-3">
+
+               </di>
+       </div>
+       <footer>
+       </footer>
+
+
+   </div>
+</body>
+</html>

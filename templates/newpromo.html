@@ -1,0 +1,31 @@
+{% extends 'accueil.html' %}
+{% block content %}
+
+<div class="inscrit">
+    <br>
+    <br>
+        <h1>PROMOTION</h1>
+        <br>
+        <br>
+        <form method="POST" id="inscrit" action="">
+            <label>Nom Promo :</label>
+            <input type="text" name="nom_promo" id="name"  required><br><br>
+            <label>Date Debut :</label>
+            <input type="date" name="date_deb" id="name" required><br><br>
+            <label>Date Fin :</label>
+            <input type="date" name="date_fin" id="name" required><br><br>
+            <label>referentiels  :</label>
+            <select name="referentiel" id="ref">
+                {% for promo in n %}   
+                    <option value="{{ promo[0] }}">{{ promo[1] }}</option>
+                {%endfor%}
+            </select>  
+            <br>
+            <br>       
+            <div class="form-group">
+                    <input class="btn btn-success" type="submit" name="valider" id="valider" value="Envoyer"/>
+                    <input class="btn btn-warning" type="reset" name="annuler" id="annuler" value="Annuler"/>
+                </div>
+        </form>
+</div>
+      {% endblock content %}
